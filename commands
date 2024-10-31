@@ -1,0 +1,11 @@
+.\server\venv\Scripts\Activate.ps1
+
+python server/server.py
+
+npm run dev
+
+
+
+deactivate
+
+pip install flask-cors
