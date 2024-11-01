@@ -1,15 +1,23 @@
 import Link from 'next/link';
 
 export default function Header({ sections, show }) {
+  const handleClick = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header className={`fixed top-0 left-0 right-0 bg-white shadow-md transition-transform duration-300 ${show ? 'translate-y-0' : '-translate-y-full'}`}>
+    <header className={`fixed top-0 left-0 right-0 bg-white transition-transform duration-300 z-50 ${show ? 'translate-y-0' : '-translate-y-full'}`}>
       <nav className="container mx-auto px-4 py-2">
-        <ul className="flex space-x-4">
+        <ul className="flex justify-center space-x-8">
           {sections.map((section) => (
             <li key={section.id}>
-              <Link href={`#${section.id}`} className="text-blue-600 hover:text-blue-800">
+              <a href={`#${section.id}`} onClick={(e) => handleClick(e, section.id)} className="text-black text-lg font-bold hover:text-blue-800" style={{ textShadow: '1px 1px 2px rgba(255, 255, 255, 0.5)' }}>
                 {section.title}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

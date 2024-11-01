@@ -25,7 +25,3 @@ body {
     text-wrap: balance;
   }
 } */
-
-.c_top {
-    @apply text-red-500
-}
