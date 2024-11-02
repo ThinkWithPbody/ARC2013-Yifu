@@ -19,9 +19,9 @@ DynamicComponent.displayName = 'DynamicComponent';
 
 export default function Section({ id, title, subtitle }: SectionProps) {
     return (
-        <section id={id} className={`min-h-screen w-screen flex items-center justify-center`}>
-            <div className="w-full text-center">
-                <div className='my-[50vh]'>
+        <section id={id} className={`min-h-screen w-screen flex flex-col items-center justify-center`}>
+            <div className="w-full flex flex-col justify-center">
+                <div className=''>
                     <h2 className="text-5xl font-bold mb-4">{title}</h2>
                     {subtitle && <h3 className="text-2xl font-semibold mb-4">{subtitle}</h3>}
                 </div>
@@ -31,3 +31,11 @@ export default function Section({ id, title, subtitle }: SectionProps) {
         </section>
     );
 }
+
+
+// <div className="min-h-[75vh] flex items-center justify-center">
+// <div className='h-auto text-centre flex flex-col items-center justify-center'>
+//     <h2 className="text-5xl font-bold mb-4">Something title title</h2>
+//     <h3 className="text-2xl font-semibold mb-4">Restoration of Downsview as Blue and Green Infrastructure</h3>
+// </div>
+// </div>

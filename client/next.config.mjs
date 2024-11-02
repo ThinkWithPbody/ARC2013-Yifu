@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/ARC2013-Yifu',
-    assetPrefix: '/ARC2013-Yifu/',
+    basePath: process.env.NODE_ENV === 'production' ? '/ARC2013-Yifu' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/ARC2013-Yifu/' : '',
     images: {
         unoptimized: true,
     },

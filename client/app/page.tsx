@@ -33,6 +33,7 @@ export default function Home() {
     }, []);
 
     const sections = [
+        { id: 'Title', title: 'Downsview', subtitle: 'Restoration as Blue and Green Infrastructure' },
         { id: 'History', title: 'History', subtitle: 'A look into the past' },
         { id: 'Condition', title: 'Condition', subtitle: 'Downsview analysis' },
         { id: 'Precedent', title: 'Precedent', subtitle: 'Historical examples' },

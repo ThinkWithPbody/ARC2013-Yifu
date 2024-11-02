@@ -10,5 +10,7 @@ export default function Scenario() {
         { src: "/sections/Scenario/GIS/Hydro.png", title: "Hydro", description: "" },
     ];
 
-    return <ImageOverlay images={images} />;
+    return <div>
+        <ImageOverlay images={images} />
+    </div>;
 }
