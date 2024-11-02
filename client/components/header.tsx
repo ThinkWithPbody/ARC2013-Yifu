@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react';
+
 interface Section {
     id: string;
     title: string;
@@ -9,7 +11,7 @@ interface HeaderProps {
 }
 
 export default function Header({ sections, show }: HeaderProps) {
-    const handleClick = (e, id) => {
+    const handleClick = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
         const element = document.getElementById(id);
         if (element) {
