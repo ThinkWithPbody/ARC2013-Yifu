@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface ImageOverlayProps {
     images: {
         src: string;
@@ -12,10 +14,13 @@ export default function ImageOverlay({ images }: ImageOverlayProps) {
             {images.map((image, index) => (
                 <div key={index} className="relative flex flex-row">
                     <div className="basis-4/5 flex items-center justify-center">
-                        <img 
+                        <Image 
                             src={image.src} 
                             alt={image.title} 
                             className="max-h-[100vh] w-auto object-contain" 
+                            layout="intrinsic"
+                            width={500} // Adjust width as needed
+                            height={500} // Adjust height as needed
                         />
                     </div>
                     <div className="basis-1/5 flex items-center justify-center">

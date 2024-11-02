@@ -2,6 +2,7 @@
 import Header from '../components/header';
 import Section from '../components/section';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
     const [showHeader, setShowHeader] = useState(false);

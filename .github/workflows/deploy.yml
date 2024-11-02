@@ -35,13 +35,8 @@ jobs:
       - name: Install dependencies
         run: |
           cd client
-          npm ci
+          npm install
 
-      - name: Replace <img> with <Image />
-        run: |
-          cd client
-          find . -type f -name "*.tsx" -exec sed -i 's/<img/<Image/g' {} +
-          find . -type f -name "*.tsx" -exec sed -i 's/<\/img>/<\/Image>/g' {} +
 
       - name: Build
         run: |

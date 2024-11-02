@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface Section {
     title: string;
     content: string[];
@@ -71,10 +73,13 @@ export default function Condition() {
                             </div>
                             {section.image && (
                                 <div className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                                    <img
+                                    <Image
                                         src={section.image}
                                         alt={`${section.title} visualization`}
                                         className="w-full rounded-lg shadow-lg"
+                                        layout="intrinsic"
+                                        width={500} // Adjust width as needed
+                                        height={500} // Adjust height as needed
                                     />
                                 </div>
                             )}
