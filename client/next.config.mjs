@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/your-repo-name',
+    basePath: '/ARC2013-Yifu', // Replace 'your-repo-name' with the actual repository name
+    assetPrefix: '/ARC2013-Yifu/', // Replace 'your-repo-name' with the actual repository name
     images: {
         unoptimized: true,
     },
