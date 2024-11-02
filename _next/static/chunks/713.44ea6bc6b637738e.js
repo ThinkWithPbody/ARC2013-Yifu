@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[713],{4713:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});var r=t(7437);function u(){return(0,r.jsx)("div",{children:"History content goes here"})}}}]);
