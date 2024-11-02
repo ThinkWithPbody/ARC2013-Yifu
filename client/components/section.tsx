@@ -15,6 +15,8 @@ const DynamicComponent = memo(({ id }: { id: string }) => {
     return <Component />;
 });
 
+DynamicComponent.displayName = 'DynamicComponent';
+
 export default function Section({ id, title, subtitle }: SectionProps) {
     return (
         <section id={id} className={`min-h-screen w-screen flex items-center justify-center`}>

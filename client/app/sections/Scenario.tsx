@@ -1,5 +1,4 @@
 import ImageOverlay from '../../components/image_overlay';
-import Image from 'next/image';
 
 export default function Scenario() {
     const images = [
