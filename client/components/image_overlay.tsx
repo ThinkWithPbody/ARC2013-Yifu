@@ -11,8 +11,12 @@ export default function ImageOverlay({ images }: ImageOverlayProps) {
         <div className="">
             {images.map((image, index) => (
                 <div key={index} className="relative flex flex-row">
-                    <div className="basis-4/5">
-                        <img src={image.src} alt={image.title} className="w-full h-auto" />
+                    <div className="basis-4/5 flex items-center justify-center">
+                        <img 
+                            src={image.src} 
+                            alt={image.title} 
+                            className="max-h-[100vh] w-auto object-contain" 
+                        />
                     </div>
                     <div className="basis-1/5 flex items-center justify-center">
                         <div className="w-full bg-black text-white p-8 -ml-16">

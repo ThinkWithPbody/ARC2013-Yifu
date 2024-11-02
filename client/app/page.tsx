@@ -34,7 +34,7 @@ export default function Home() {
 
     const sections = [
         { id: 'History', title: 'History', subtitle: 'A look into the past' },
-        { id: 'Condition', title: 'Condition', subtitle: 'Current state analysis' },
+        { id: 'Condition', title: 'Condition', subtitle: 'Downsview analysis' },
         { id: 'Precedent', title: 'Precedent', subtitle: 'Historical examples' },
         { id: 'Scenario', title: 'Scenario', subtitle: 'Future possibilities' },
     ];
