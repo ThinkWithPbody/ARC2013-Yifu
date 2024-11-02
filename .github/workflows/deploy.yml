@@ -18,14 +18,19 @@ jobs:
         with:
           node-version: '18.17.0'  # Update to the required Node.js version
 
+      - name: Change directory to client
+        run: cd client
+
       - name: Install dependencies
         run: npm install
+        working-directory: ./client  # Set working directory to client
 
       - name: Build the project
         run: npm run build
+        working-directory: ./client  # Set working directory to client
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out  # Ensure this matches your build output directory
+          publish_dir: ./client/out  # Ensure this matches your build output directory
