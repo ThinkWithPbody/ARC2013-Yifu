@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd client
-          npm ci
+          npm install
 
       - name: Build with Next.js
         run: |
