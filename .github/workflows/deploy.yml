@@ -16,10 +16,32 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+
+      - name: Cache Next.js build
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/client/.next/cache
+          key: ${{ runner.OS }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.OS }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
       - name: Install dependencies
         run: |
           cd client
-          npm install
+          npm ci
+
+      - name: Replace <img> with <Image />
+        run: |
+          cd client
+          find . -type f -name "*.tsx" -exec sed -i 's/<img/<Image/g' {} +
+          find . -type f -name "*.tsx" -exec sed -i 's/<\/img>/<\/Image>/g' {} +
 
       - name: Build
         run: |

@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function Header({ sections, show }) {
     const handleClick = (e, id) => {
         e.preventDefault();

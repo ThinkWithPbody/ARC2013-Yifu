@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { Suspense, memo } from 'react';
+import { memo } from 'react';
 
 interface SectionProps {
     id: string;
