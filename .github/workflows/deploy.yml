@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '18.18.0'  # Update to the required Node.js version
 
+      - name: Change directory to client
+        run: cd client
+
       - name: Install dependencies
         run: npm install
         working-directory: ./client  # Set working directory to client
