@@ -1,4 +1,14 @@
-export default function Header({ sections, show }) {
+interface Section {
+    id: string;
+    title: string;
+}
+
+interface HeaderProps {
+    sections: Section[];
+    show: boolean;
+}
+
+export default function Header({ sections, show }: HeaderProps) {
     const handleClick = (e, id) => {
         e.preventDefault();
         const element = document.getElementById(id);
